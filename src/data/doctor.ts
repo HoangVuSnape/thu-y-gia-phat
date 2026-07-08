@@ -1,7 +1,7 @@
 export const doctor = {
   name: "Nguyễn Minh Tú",
-  title: "Bác sĩ phụ trách phòng khám",
-  degree: "Kỹ sư Chăn nuôi Thú y",
+  title: "ThS. BS. phụ trách phòng khám",
+  degree: "Thạc sĩ Bác sĩ Thú y",
   license:
     "Chứng chỉ hành nghề thú y số 75/CCCNTYTS-CCHN — Chi cục Chăn nuôi, Thú y và Thủy sản tỉnh Bình Dương cấp ngày 16/09/2024",
   licensedScope: [
