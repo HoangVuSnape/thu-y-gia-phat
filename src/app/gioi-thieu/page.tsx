@@ -8,7 +8,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Về chúng tôi",
-  description: `BS. ${doctor.name} — ${doctor.degree}, phụ trách chuyên môn tại ${site.name}.`,
+  description: `ThS. BS. ${doctor.name} — ${doctor.degree}, phụ trách chuyên môn tại ${site.name}.`,
 };
 
 export default function AboutPage() {
@@ -28,7 +28,7 @@ export default function AboutPage() {
         />
         <div>
           <h3 className="font-heading text-2xl font-bold text-brand">
-            BS. {doctor.name}
+            ThS. BS. {doctor.name}
           </h3>
           <p className="font-medium text-accent">{doctor.title}</p>
           <p className="mt-3">

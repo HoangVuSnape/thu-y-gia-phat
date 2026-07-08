@@ -100,7 +100,7 @@ export default function HomePage() {
         </Reveal>
         <Reveal delay={150} className="text-center sm:text-left">
           <h2 className="font-heading text-2xl font-bold text-brand">
-            BS. {doctor.name}
+            ThS. BS. {doctor.name}
           </h2>
           <p className="mt-1 font-medium text-accent">{doctor.degree}</p>
           <p className="mt-3 opacity-80">
