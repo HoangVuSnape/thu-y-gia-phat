@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #d42b2b;
+  --color-brand-dark: #b32222;
+  --color-cream: #fff8f0;
+  --color-ink: #3d2b24;
+  --color-accent: #f0944a;
+  --font-heading: var(--font-baloo), sans-serif;
+  --font-body: var(--font-be-vietnam), sans-serif;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+/* Animations only when the user allows motion */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+    transition-delay: var(--reveal-delay, 0s);
+  }
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .animate-float {
+    animation: float 4.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      box-shadow: 0 0 0 0 rgb(212 43 43 / 0.45);
+    }
+    70% {
+      box-shadow: 0 0 0 14px rgb(212 43 43 / 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgb(212 43 43 / 0);
+    }
+  }
+  .animate-pulse-ring {
+    animation: pulse-ring 2.2s infinite;
+  }
+}
