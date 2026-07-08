@@ -13,6 +13,11 @@ export const site = {
     facebookPersonal: "/images/qr/fb-a-tu.png",
     bank: "/images/qr/bank-vietqr.jpg",
   },
+  /** URLs decoded from the QR images in asset/qr */
+  socials: {
+    doctorFacebook: "https://www.facebook.com/minhtu.nguyen.359",
+    tiktok: "https://www.tiktok.com/@thu.y.gia.phat",
+  },
   bank: {
     bankName: "Vietcombank",
     accountName: "Hộ kinh doanh Gia Phát",
