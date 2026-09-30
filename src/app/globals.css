@@ -18,7 +18,16 @@ body {
 
 /* Animations only when the user allows motion */
 @media (prefers-reduced-motion: no-preference) {
+  /* Mac dinh HIEN. Hieu ung xuat hien chi bat khi JS da chay that su
+     (the <html> co class "js", dat boi doan script nho trong layout).
+     Neu de opacity:0 lam mac dinh thi JS hong, bi chan hay tai cham la
+     trang trang tron - ma day la trang gioi thieu phong kham, noi dung
+     chinh la so dien thoai va dia chi. */
   .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .js .reveal {
     opacity: 0;
     transform: translateY(24px);
     transition:
@@ -26,9 +35,17 @@ body {
       transform 0.7s ease;
     transition-delay: var(--reveal-delay, 0s);
   }
-  .reveal-visible {
+  .js .reveal-visible {
     opacity: 1;
     transform: none;
+  }
+  /* Nguoi bat "giam chuyen dong" trong he dieu hanh thi khong hieu ung. */
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
   }
 
   @keyframes float {

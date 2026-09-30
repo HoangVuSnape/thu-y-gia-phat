@@ -44,6 +44,17 @@ const jsonLd = locations.map((loc) => ({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi" className={`${baloo.variable} ${beVietnam.variable}`}>
+      <head>
+        {/* Chay ngay luc trinh duyet doc toi, truoc khi ve khung hinh dau
+            tien: khong co no thi hieu ung xuat hien khong bat, va trang
+            van doc duoc binh thuong. Dat trong <head> chu khong phai
+            useEffect vi useEffect chay SAU khi ve - se thay noi dung nhay. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.add("js")`,
+          }}
+        />
+      </head>
       <body>
         <script
           type="application/ld+json"
